@@ -31,6 +31,9 @@ body {
 html, body {
   height: 100%;
 }
+p { 
+  font-family: "Comic Sans MS", "Comic Sans", cursive; 
+}
 p, form {
   line-height: 1.4;
   margin: 30px auto;
@@ -185,18 +188,18 @@ p code {
 }
 pre {
   display: block;
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(255, 255, 255, 0.8);
   overflow-y: hidden;
   overflow-x: auto;
   font-size: 14px;
   padding: 15px;
   border-radius: 4px;
-  color: #f8f8f2;
+  color: #9b9b9b;
   line-height: 1.4;
   margin: 30px auto;
 }
 pre code {
-  font-size: 14px;
+  font-size: 12px;
 }
 small {
   font-size: .8em;
@@ -248,7 +251,7 @@ hr {
   height: 141px;
 }
 header {
-  padding-top: 20px;
+  padding-top: 24px;
   position: relative;
   color: rgba({{ site.text-color }},.5);
 }
@@ -329,12 +332,12 @@ input[type="submit"] {
   margin-bottom: 50px;
 }
 footer {
-  font-size: 0.8em;
-  color: rgba({{ site.text-color }},0.5);
+  font-size: 1.1em;
+  color: rgb({{ site.footer-text-color }});
   text-align: center;
-  background-color: rgba({{ site.text-color }}, 0.05);
+  background-color: rgba({{ site.text-color }}, 0.9);
   border-top: 1px solid rgba({{ site.text-color }}, 0.1);
-  height: 140px;
+  height: 140px; 
 }
 footer a {
   background-image: none;
@@ -347,19 +350,19 @@ footer .inner {
   max-width: 740px;
 }
 
-
 /* Content overwrites */
 
 .website-title {
-  font-family: "Source Sans Pro", Verdana, sans-serif;
+  font-family: "Yellowtail", cursive;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
   display: block;
   background-image: none;
   text-decoration: none !important;
   color: rgba({{ site.text-color }}, .76);
 }
+
 nav a {
   display: block;
   padding: 5px;
@@ -388,12 +391,11 @@ nav a.current {
   background-image: linear-gradient(rgba({{ site.text-color }},.5),rgba({{ site.text-color }},.5));
 }
 
-
 /* Structure overwrites */
 
 @media all and (min-width: 370px) {
   .website-title {
-    font-size: 32px;
+    font-size: 28px;
   }
 }
 @media all and (min-width: 500px) {
@@ -457,10 +459,13 @@ nav a.current {
 @media all and (min-width: {{ site.nav-breaking-point }}) {
   .website-title {
     text-align: left;
+    font-family: 'Beau Rivage', cursive;
+    font-size: 28px;
+    margin-bottom: 80px;
   }
   nav {
     position: absolute;
-    top: 20px;
+    top: 24px;
     right: 0;
     margin: 0;
   }
@@ -468,13 +473,10 @@ nav a.current {
     display: inline-block;
     padding: 5px 8px;
   }
-  .website-title {
-    margin-bottom: 80px;
-  }
 }
 @media all and (min-width: 760px) {
   h1 {
-    font-size: 2.9em;
+    font-size: 2.6em;
   }
   article:last-of-type::after {
     content: "";

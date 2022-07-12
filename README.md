@@ -15,7 +15,6 @@ See it in action: http://steinvc.github.io/holo-alfa/.
 * Responsive video's (using [FitVids.JS](http://fitvidsjs.com/))
 * Support for authors and guest authors
 * Read time on articles
-* Disqus comments
 * Language localization
 * Automatic [og metadata](http://ogp.me/)
 * Automatic archive page (without plugins)
