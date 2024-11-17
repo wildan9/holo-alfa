@@ -1,3 +1,37 @@
 <nav>
   <a href="{{ site.url }}/archive/">Archive</a>
+  <a href="#" id="toggleMode">
+    <i id="modeIcon" class="fas fa-sun"></i>
+  </a>
 </nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.getElementById('toggleMode');
+    const modeIcon = document.getElementById('modeIcon');
+    const body = document.body;
+
+    // Check local storage for theme preference or set default to dark mode
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.add('light-mode');
+      modeIcon.classList.replace('fa-sun', 'fa-moon');
+    } else {
+      body.classList.add('dark-mode'); // Default to dark mode if no preference
+      modeIcon.classList.replace('fa-moon', 'fa-sun'); // Set icon to sun
+    }
+
+    // Toggle mode and save preference
+    toggleButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      if (body.classList.contains('light-mode')) {
+        body.classList.replace('light-mode', 'dark-mode');
+        modeIcon.classList.replace('fa-moon', 'fa-sun');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        modeIcon.classList.replace('fa-sun', 'fa-moon');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  });
+</script>

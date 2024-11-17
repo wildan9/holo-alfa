@@ -10,7 +10,14 @@ layout: default
 {% endif %}
 
 <article>
-  <span class="meta">{{ page.date | date: site.date_format }} • {{ read-time }}</span>
+  <span class="meta">
+    published on: {{ page.date | date: "%b %-d, %Y" | downcase }}
+    {% if page.update_date %}
+        • updated on: {{ page.update_date | date: "%b %-d, %Y" | downcase }}
+    {% endif %}
+    • {{ read-time }}
+  </span>
+
 	<h1>{{ page.title }}</h1>
 		{{ content }}
   {% if site.display-author-post-page %}
